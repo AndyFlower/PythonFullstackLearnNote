@@ -180,16 +180,29 @@ li = ["alex", "wusir", "taibai", 2]
 # 8.利用for循环和range从100~1，倒序打印。
 #
 # 9.利用for循环和range从100~10，倒序将所有的偶数添加到一个新列表中，然后对列表的元素进行筛选，将能被4整除的数留下来。
-#
+
 # 10.利用for循环和range，将1-30的数字一次添加到一个列表中，并循环这个列表，将能被3整除的数改成*。
 #
 # 11.查找列表li中的元素，移除每个元素的空格，并找出以"A"或者"a"开头，并以"c"结尾的所有元素，并添加到一个新列表中,最后循环打印这个新列表。
-# li = ["TaiBai ", "alexC", "AbC ", "egon", " riTiAn", "WuSir", " aqc"]
-#
+li = ["TaiBai ", "alexC", "AbC ", "egon", " riTiAn", "WuSir", " aqc"]
+new_l = []
+for i in li:
+    new_i = i.strip()
+    if new_i.upper().startswith('A') and new_i.endswith('c'):
+        new_l.append(new_i)
+for i in new_l:
+    print(i)
 # 12.开发敏感词语过滤程序，提示用户输入评论内容，如果用户输入的内容中包含特殊的字符：
-# 敏感词列表 li = ["苍老师", "东京热", "武藤兰", "波多野结衣"]
+# 敏感词列表
+li = ["苍老师", "东京热", "武藤兰", "波多野结衣"]
 # 则将用户输入的内容中的敏感词汇替换成等长度的*（苍老师就替换***），并添加到一个列表中；如果用户输入的内容没有敏感词汇，则直接添加到上述的列表中。
-#
+comment_list = []
+comment = input('请输入您的评论')
+for word in li:
+    if word in comment:
+        comment = comment.replace(word,'*' * len(word))
+comment_list.append(comment)
+print(comment_list)
 # 13.有如下列表（选做题）
 li = [1, 3, 4, "alex", [3, 7, 8, "TaiBai"], 5, "RiTiAn"]
 # 循环打印列表中的每个元素，遇到列表则再循环打印出它里面的元素。
@@ -205,6 +218,12 @@ li = [1, 3, 4, "alex", [3, 7, 8, "TaiBai"], 5, "RiTiAn"]
 # 5
 # ritian
 #
+for i in li:
+    if type(i) == list:
+        for j in i:
+            print(j)
+    else:
+        print(i)
 
 # 明日默写内容
 # 将列表的增删改查不同的方法全部写出来，
