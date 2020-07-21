@@ -102,11 +102,11 @@ av_catalog = {
 # 删除这个键值对："oldboy.com": ["多是自拍,高质量图片很多","资源不多,更新慢"]
 #
 # 给此["全部免费,真好,好人一生平安","服务器在国外,慢"]列表的第一个元素，加上一句话：'可以爬下来'
-# dic = av_catalog['大陆']
-# li = dic['1024']
-# new_s = li[0] + '可以爬下来'
-# li[0] = new_s
-# print(av_catalog)
+dic = av_catalog['大陆']
+li = dic['1024']
+new_s = li[0] + '可以爬下来'
+li[0] = new_s
+print(av_catalog)
 
 # dic = av_catalog['大陆']
 # li = av_catalog['大陆']['1024']
