@@ -141,6 +141,18 @@ print(dic)
 # 有如下值 li= [11,22,33,44,55,66,77,88,99,90] ,将所有大于 66 的值保存至字典的第一个key对应的列表中，将小于 66 的值保存至第二个key对应的列表中。
 # result = {'k1':[],'k2':[]}
 # """
+li= [11,22,33,44,55,66,77,88,99,90]
+l1 = []
+l2 = []
+result = {'k1':[],'k2':[]}
+for i in li:
+    if i > 66:
+        l1.append(i)
+    else:
+        l2.append(i)
+result['k1']=l1
+result['k2']=l2
+print(result)
 # 输出商品列表，用户输入序号，显示用户选中的商品
 #
 # """
@@ -161,7 +173,34 @@ print(dic)
 # 4：用户输入Q或者q，退出程序。
 # """
 # 看代码写结果
-#
+
+goods = [
+ 	{"name": "电脑", "price": 1999},
+ 	{"name": "鼠标", "price": 10},
+ 	{"name": "游艇", "price": 20},
+ 	{"name": "美女", "price": 998}
+]
+# 枚举
+l1  = ['a','b','v']
+for i in enumerate(l1,start=1):
+    print(i)
+for index in range(len(goods)):
+    print(index+1,goods[index]['name'],goods[index]['price'])
+
+for num,dic in enumerate(goods,start=1):
+    print(num,dic['name'],dic['price'])
+while True:
+    choice_num = input('请输入商品序号：').strip()
+    if choice_num.isdecimal():
+        choice_num = int(choice_num);
+        if 0<choice_num<len(goods):
+            print('您选择的商品名称是{},价格是{}'.format(goods[choice_num-1]['name'],goods[choice_num-1]['price']))
+        else:
+            print('超出范围，重新输入')
+    elif choice_num.upper()=='Q':
+        break;
+    else:
+        print('输入有误')
 # v = {}
 # for index in range(10):
 #     v['users'] = index
