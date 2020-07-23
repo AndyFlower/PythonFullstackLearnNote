@@ -87,3 +87,6 @@ for key in list(dic.keys()):
     if 'k' in key:
         dic.pop(key)
 print(dic)
+
+
+# 0 '' () [] {} set() None  转bool为false
