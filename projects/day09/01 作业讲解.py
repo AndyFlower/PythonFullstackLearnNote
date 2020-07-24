@@ -51,7 +51,9 @@ f = open('a1.txt',encoding='utf-8',mode='a')
 # ​	分别完成下面的功能：
 #
 # ​	a,以r的模式打开原文件，利用for循环遍历文件句柄。
-#
+with open('金刚葫芦娃' ,encoding='utf-8') as f1:
+    for line in f1 :
+        print(f1);
 # ​	b,以r的模式打开原文件，以readlines()方法读取出来，并循环遍历 readlines(),并分析a与b有什么区别？深入理解文件句柄与 readlines()结果的区别。
 #
 # ​	c,以r模式读取‘葫芦娃，’前四个字符。
