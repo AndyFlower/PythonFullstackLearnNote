@@ -87,7 +87,7 @@
 # count = 1
 # def func():
 #     # print(count)
-#     global count
+#     global count # 在局部创建一个全局变量 并可以修改全局变量
 #     count += 1
 # print(count)
 # func()
